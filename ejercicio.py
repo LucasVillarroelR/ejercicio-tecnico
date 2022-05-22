@@ -16,7 +16,7 @@ with open(logs_file2, "r") as file:
 logs_splitted = (list(map(lambda s: s.split(";"), logs)))
 
 # Se ordenan por el 3er elemento
-logs_sorted = sorted(logs_splitted, key=lambda x: x[2])
+logs_sorted = sorted(logs_splitted, key=lambda x: int(x[2]))
 
 # Se escriben los logs ordenados
 with open("logs_ordenados", "w") as file:
